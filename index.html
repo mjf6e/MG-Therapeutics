@@ -121,6 +121,8 @@
     transition:color .2s ease;
   }
   nav a:hover, nav a:focus-visible{color:var(--ember);}
+  .nav-external{display:inline-flex; align-items:center; gap:4px; color:var(--muted-2) !important; font-family:var(--mono); font-size:0.78rem; letter-spacing:0.02em; border-right:1px solid var(--line); padding-right:22px;}
+  .nav-external:hover{color:var(--ember) !important;}
   .nav-links{display:flex;}
   .nav-cta{
     font-family:var(--sans); font-weight:600; font-size:0.84rem;
@@ -339,9 +341,13 @@
     .menu-btn{display:block;}
     header.open .nav-links{
       display:flex; position:absolute; top:100%; left:0; right:0;
-      flex-direction:column; background:rgba(247,242,230,0.98); padding:20px 32px; gap:18px;
+      background:#f7f2e6; padding:20px 32px;
       border-bottom:1px solid var(--line);
     }
+    header.open .nav-links ul{
+      flex-direction:column; align-items:flex-start; gap:16px; width:100%;
+    }
+    header.open .nav-external{border-right:none; padding-right:0; border-bottom:1px solid var(--line); padding-bottom:16px; width:100%;}
     header.open .nav-cta{display:inline-flex; margin:6px 32px 20px;}
     .contact-card{flex-direction:column; align-items:flex-start;}
   }
@@ -446,6 +452,7 @@
   </a>
   <nav class="nav-links">
     <ul>
+      <li><a href="https://mjf6e.github.io/Ma-Lab-Research-Portfolio/" target="_blank" rel="noopener" class="nav-external">Ma Laboratory <span aria-hidden="true">↗</span></a></li>
       <li><a href="#science">Science</a></li>
       <li><a href="#platform">Platform</a></li>
       <li><a href="#pipeline">Pipeline</a></li>
@@ -816,6 +823,7 @@
 
 <footer>
   <div class="foot-links">
+    <a href="https://mjf6e.github.io/Ma-Lab-Research-Portfolio/" target="_blank" rel="noopener">Ma Laboratory ↗</a>
     <a href="#science">Science</a>
     <a href="#platform">Platform</a>
     <a href="#pipeline">Pipeline</a>
